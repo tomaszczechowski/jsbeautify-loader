@@ -6,7 +6,7 @@
  */
 var path = require("path")
   , fs = require("fs")
-  , beautify = require('js-beautify').js_beautify
+  , beautify = require('js-beautify')
   , RcLoader = require("rcloader")
   , stripJsonComments = require('strip-json-comments')
   , fileExtensionParser = require('file-extension')
@@ -129,7 +129,7 @@ var processAsync = function (source, fileExtension, globalOptions, callback) {
  * Module definition
  * @param  {String} source - file content
  * @return {[type]}        [description]
- */
+ */g
 module.exports = function (source) {
   this.cacheable();
   var callback = this.async()
