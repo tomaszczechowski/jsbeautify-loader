@@ -1,19 +1,25 @@
 {
   "name": "jsbeautifier-loader",
-  "version": "0.1.0",
-  "description": "Webpack loader for jsbeautifier ",
+  "version": "0.2.0",
+  "description": "Webpack loader for jsbeautifier",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "git": "git@github.com:tomaszczechowski/jsbeautifier-loader.git",
   "keywords": [
     "webpack",
     "webpack-jsbeautifier",
+    "webpack jsbeautifier",
     "jsbeautifier",
     "jsbeautifier loader",
-    "jsbeautifier-loader"
+    "jsbeautifier-loader",
+    "beautifier",
+    "beautifier loader"
   ],
   "author": "Tomasz Czechowski",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "file-extension": "^2.0.1",
+    "js-beautify": "^1.6.4",
+    "rcloader": "^0.1.2",
+    "strip-json-comments": "^2.0.1"
+  }
 }
