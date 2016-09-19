@@ -4,6 +4,9 @@
 ## Ustage
 
 1. Define code syntax in `.jsbeautifyrc` file
+
+or
+
 2. Apply the jsBeautify loader as pre/postLoader in webpack configuration:
 
 ```javascript
