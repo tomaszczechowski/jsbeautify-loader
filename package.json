@@ -3,7 +3,11 @@
   "version": "0.2.0",
   "description": "Webpack loader for jsbeautify",
   "main": "index.js",
-  "git": "git@github.com:tomaszczechowski/jsbeautify-loader.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https:github.com:tomaszczechowski/jsbeautify-loader.git"
+  },
+  "homepage": "https://github.com/tomaszczechowski/jsbeautify-loader",
   "keywords": [
     "webpack",
     "webpack-jsbeautify",
@@ -14,8 +18,14 @@
     "jsbeautify",
     "jsbeautify loader"
   ],
-  "author": "Tomasz Czechowski",
+  "author": {
+    "name": "Tomasz Czechowski",
+    "url": "http://www.czechowski.pl"
+  },
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tomaszczechowski/jsbeautify-loader/issues"
+  },
   "dependencies": {
     "file-extension": "^2.0.1",
     "js-beautify": "^1.6.4",
