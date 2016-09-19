@@ -1,6 +1,6 @@
 /**
  * jsBeautifiler Loader for Webpack
- * @author Tomasz Czechowski
+ * @author Tomasz Czechowski (czechowski.pl)
  * @copyright 2016
  * @license MIT
  */
@@ -17,7 +17,7 @@ var path = require("path")
   });
 
 /**
- * Method checks whether jsBeautfier exists in webpack config file.
+ * Method checks whether jsBeautfier property exists in webpack config file.
  * @return {Object} - returns config object or null in case object does not exist.
  */
 var getGlobalOptions = function () {
@@ -29,12 +29,13 @@ var getGlobalOptions = function () {
 };
 
 /**
- * Methid checks whether config object is nested.
+ * Method checks whether config object is nested.
  * @param  {Object}  obj - configuration object.
  * @return {Boolean}
  */
 var isNestedStructure = function (obj) {
   for (var prop in obj) {
+    //todo: if obj[prop] would be an array? check if obj[prop] is LITERAL object!
     if (typeof obj[prop] === "object") {
       return true;
     }
@@ -44,7 +45,7 @@ var isNestedStructure = function (obj) {
 };
 
 /**
- * Method checks whether file's extensions has corresponded configuration object.
+ * Method checks whether file's extension has corresponded configuration object.
  * @param  {Object} options       - configuration object.
  * @param  {String} fileExtension - file's extension.
  * @return {String|Object}        - object key or null.
@@ -71,8 +72,8 @@ var getOptionsForExtension = function (options, fileExtension) {
 };
 
 /**
- * Method parses file synchroniously
- * @param  {String} source        - file content.
+ * Method parses file synchronously
+ * @param  {String} source        - file's content.
  * @param  {String} fileExtension - file's extension.
  * @param  {Object} globalOptions - configuration from weback file.
  * @return {String}               - parsed content of file.
@@ -83,18 +84,18 @@ var processSync = function (source, fileExtension, globalOptions) {
 
   if (globalOptions === null && typeof path === "string") {
     this.addDependency(path);
-    options = getOptionsForExtension(JSON.parse(stripJsonComments(fs.readFileSync(path, "utf8"))), fileExtension);
+    options = JSON.parse(stripJsonComments(fs.readFileSync(path, "utf8")));
   }
 
-  return beautify(source, options);
+  return beautify(source, getOptionsForExtension(options, fileExtension));
 };
 
 /**
- * Method parses file asysynchroniously
- * @param  {String} source        - file content.
-m* @param  {String} fileExtension - file's extension.
+ * Method parses file asynchronously
+ * @param  {String} source        - file's content.
+ * @param  {String} fileExtension - file's extension.
  * @param  {Object} globalOptions - configuration from weback file.
- * @param  {Function} callback    - callback function with processed content or with error.
+ * @param  {Function} callback    - callback function with processed file content or with error message.
  */
 var processAsync = function (source, fileExtension, globalOptions, callback) {
   var _this = this;
@@ -127,11 +128,12 @@ var processAsync = function (source, fileExtension, globalOptions, callback) {
 
 /**
  * Module definition
- * @param  {String} source - file content
- * @return {[type]}        [description]
+ * @param  {String} source - file content.
+ * @return {String}        - modified file content or nothing if task is ran asynchronously.
  */
 module.exports = function (source) {
   this.cacheable();
+
   var callback = this.async()
     , options = getGlobalOptions.call(this)
     , fileExtension = fileExtensionParser(this.resource).toLowerCase();
