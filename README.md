@@ -3,17 +3,15 @@
 
 ## Ustage
 
-1. Define code syntax in `.jsbeautifyrc` file
+Code syntax can be either define in `.jsbeautifyrc` file or in webpack config file:
 
-or
-
-2. Apply the jsBeautify loader as pre/postLoader in webpack configuration:
+### Example
 
 ```javascript
 module.exports = {
   jsBeautify: {
     "js": {
-      "allowed_file_extensions": ["js"],
+      "allowed_file_extensions": ["js"], // optional parameter in case allowed file extension is the same as name of parent property.
       "indent_size": 2,
       "indent_char": " ",
       "space_after_anon_function": true
@@ -35,9 +33,34 @@ module.exports = {
   }
 };
 ```
-All available options you can find here: [https://github.com/beautify-web/js-beautify](https://github.com/beautify-web/js-beautify)
+
+
+```javascript
+module.exports = {
+  jsBeautify: {
+    // configuration for each file regardless of its extension.
+    "indent_size": 2,
+    "indent_char": " ",
+    "space_after_anon_function": true
+  },
+
+  module: {
+    preLoaders: [
+      {
+        test: /\.(js|html)$/,
+        exclude: /node_modules/,
+        loader: 'jsbeautify-loader'
+      }
+    ]
+  }
+};
+```
+
+
+All available code formatting options you can find here: [https://github.com/beautify-web/js-beautify](https://github.com/beautify-web/js-beautify)
 
 ##### Release History
+ * 2016-09-19   v0.2.1   Updated documentation
  * 2016-09-19   v0.2.0   Initial version.
 
 License: MIT
