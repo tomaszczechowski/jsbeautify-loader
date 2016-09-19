@@ -45,5 +45,5 @@ Author [Tomasz Czechowski](http://czechowski.pl/)
 [travis-image]: https://secure.travis-ci.org/tomaszczechowski/jsbeautify-loader.svg?branch=master
 [npm-url]: https://npmjs.org/package/jsbeautify-loader
 [npm-image]: https://badge.fury.io/js/jsbeautify-loader.svg
-[gulp-string-replace-dependencies-image]: https://david-dm.org/tomaszczechowski/jsbeautify-loader/status.png
-[gulp-string-replace-dependencies-url]: https://david-dm.org/tomaszczechowski/jsbeautify-loader#info=dependencies
+[jsbeautify-loader-dependencies-image]: https://david-dm.org/tomaszczechowski/jsbeautify-loader/status.png
+[jsbeautify-loader-dependencies-url]: https://david-dm.org/tomaszczechowski/jsbeautify-loader#info=dependencies
