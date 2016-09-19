@@ -38,7 +38,7 @@ module.exports = {
 All available options you can find here: [https://github.com/beautify-web/js-beautify](https://github.com/beautify-web/js-beautify)
 
 ##### Release History
- * 2016-09-19   v0.1.0   Initial version.
+ * 2016-09-19   v0.2.0   Initial version.
 
 License: MIT
 
