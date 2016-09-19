@@ -8,16 +8,16 @@
 
 ```javascript
 module.exports = {
-  jsBeautfier: {
+  jsBeautify: {
     "js": {
       "allowed_file_extensions": ["js"],
       "indent_size": 2,
-      "indent_char": " ", // Indentation character,
+      "indent_char": " ",
       "space_after_anon_function": true
     },
     "html": {
       "allowed_file_extensions": ["html", "xhtml", "shtml", "xml", "svg"],
-      "indent_size": 2,
+      "indent_size": 2
     }
   },
 

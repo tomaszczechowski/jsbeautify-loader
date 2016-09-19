@@ -17,12 +17,12 @@ var path = require("path")
   });
 
 /**
- * Method checks whether jsBeautfier property exists in webpack config file.
+ * Method checks whether jsBeautify property exists in webpack config file.
  * @return {Object} - returns config object or null in case object does not exist.
  */
 var getGlobalOptions = function () {
-  if ('jsBeautfier' in this.options) {
-    return this.options.jsBeautfier;
+  if ('jsBeautify' in this.options) {
+    return this.options.jsBeautify;
   }
 
   return null;
