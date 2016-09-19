@@ -1,11 +1,11 @@
 {
   "name": "jsbeautify-loader",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Webpack loader for jsbeautify",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https:github.com:tomaszczechowski/jsbeautify-loader.git"
+    "url": "git+https://github.com/tomaszczechowski/jsbeautify-loader.git"
   },
   "homepage": "https://github.com/tomaszczechowski/jsbeautify-loader",
   "keywords": [

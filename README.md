@@ -60,8 +60,7 @@ module.exports = {
 All available code formatting options you can find here: [https://github.com/beautify-web/js-beautify](https://github.com/beautify-web/js-beautify)
 
 ##### Release History
- * 2016-09-19   v0.2.1   Updated documentation
- * 2016-09-19   v0.2.0   Initial version.
+ * 2016-09-19   v0.2.2   Initial version.
 
 License: MIT
 
