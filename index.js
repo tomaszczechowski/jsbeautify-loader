@@ -1,5 +1,5 @@
 /**
- * jsBeautifiler Loader for Webpack
+ * jsBeautify loader for Webpack
  * @author Tomasz Czechowski (czechowski.pl)
  * @copyright 2016
  * @license MIT
