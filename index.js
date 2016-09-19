@@ -129,7 +129,7 @@ var processAsync = function (source, fileExtension, globalOptions, callback) {
  * Module definition
  * @param  {String} source - file content
  * @return {[type]}        [description]
- */g
+ */
 module.exports = function (source) {
   this.cacheable();
   var callback = this.async()
