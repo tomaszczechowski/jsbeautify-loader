@@ -1,6 +1,6 @@
 {
   "name": "jsbeautify-loader",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "Webpack loader for jsbeautify",
   "main": "index.js",
   "repository": {
